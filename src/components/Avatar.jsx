@@ -1,4 +1,5 @@
 import styles from './Avatar.module.css'
+import PropTypes from 'prop-types'
 
 export function Avatar({ hasBorder = true, src }) {
   return (
@@ -7,4 +8,9 @@ export function Avatar({ hasBorder = true, src }) {
       src={src}
     />
   )
+}
+
+Avatar.propTypes = {
+  hasBorder: PropTypes.bool,
+  src: PropTypes.string.isRequired,
 }
